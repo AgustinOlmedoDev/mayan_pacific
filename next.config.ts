@@ -13,6 +13,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  experimental: {
+    appDir: true,
+  },
 };
 
+// @ts-expect-error - con esto ignoramos el error de tipos
 export default withNextIntl(nextConfig);

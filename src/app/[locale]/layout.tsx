@@ -1,36 +1,36 @@
-import type React from "react"
-import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
-import { notFound } from "next/navigation"
+import type { ReactNode } from "react";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import "../globals.css"; // 🔥 IMPORTANTE
 
-const locales = ["es", "en"]
+const locales = ["es", "en"];
 
 export async function generateStaticParams() {
-  return [{ locale: "es" }, { locale: "en" }]
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
   children,
   params,
 }: {
-  children: React.ReactNode
-  params: { locale: string }
+  children: ReactNode;
+  params: { locale: string };
 }) {
-  const { locale } = params
+  const { locale } = params;
 
-  if (!locales.includes(locale)) {
-    notFound()
-  }
+  if (!locales.includes(locale)) notFound();
 
-  const messages = await getMessages({ locale }) // ✅ ¡CORREGIDO!
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
+      <head />
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
     </html>
-  )
+  );
 }

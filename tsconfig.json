@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -12,16 +16,27 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx", 
+    "jsx": "preserve",
+    "baseUrl": ".", // ✅ Para que los imports absolutos funcionen bien
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "plugins": [
-      { "name": "next" }
+      {
+        "name": "next"
+      },
+      {
+        "name": "typescript-plugin-css-modules"
+      } // si usás CSS Modules
     ]
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

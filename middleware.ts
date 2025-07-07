@@ -1,10 +1,13 @@
 import createMiddleware from 'next-intl/middleware';
+import { locales, defaultLocale } from './i18n';
 
 export default createMiddleware({
-  locales: ['en', 'es'],
-  defaultLocale: 'en'
+  locales,
+  defaultLocale,
+  // Esto asegura que redireccione `/` → `/es`
+  localePrefix: 'as-needed',
 });
 
 export const config = {
-  matcher: ['/', '/(en|es)/:path*']
+  matcher: ['/', '/(es|en)/:path*'],
 };
