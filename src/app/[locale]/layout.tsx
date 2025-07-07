@@ -5,7 +5,6 @@ import { notFound } from "next/navigation"
 
 const locales = ["es", "en"]
 
-// ✅ Agregar generateStaticParams aquí (en el layout)
 export async function generateStaticParams() {
   return [{ locale: "es" }, { locale: "en" }]
 }
@@ -15,20 +14,22 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   if (!locales.includes(locale)) {
     notFound()
   }
 
-  const messages = await getMessages()
+  const messages = await getMessages({ locale }) // ✅ ¡CORREGIDO!
 
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   )
