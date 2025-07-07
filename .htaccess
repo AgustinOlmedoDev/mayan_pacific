@@ -1,0 +1,19 @@
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Redirigir la raíz a español
+RewriteRule ^$ /es/ [R=301,L]
+
+# Permitir acceso a archivos estáticos
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Configurar tipos MIME
+AddType text/html .html
+AddType application/javascript .js
+AddType text/css .css
+
+# Headers de seguridad
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options SAMEORIGIN

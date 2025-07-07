@@ -1,0 +1,82 @@
+{
+    "nav": {
+      "welcome": "Welcome to Mayan Pacific Realty",
+      "catalog": "CATALOG",
+      "contact": "CONTACT",
+      "about": "About Us"
+    },
+    "hero": {
+      "title": "Luxury Properties in Riviera Maya",
+      "subtitle": "Discover your perfect home in paradise"
+    },
+    "projects": {
+      "title": "Our Projects",
+      "exclusive": "Exclusive project",
+      "available": "Available",
+      "delivery": "Delivery",
+      "features": "Main features",
+      "knowMore": "Learn more"
+    },
+    "catalog": {
+      "title": "Discover more exclusive properties",
+      "subtitle": "Explore our complete collection of luxury properties in the most coveted destinations of the Riviera Maya. Each property has been carefully selected to offer maximum exclusivity and comfort.",
+      "viewCatalog": "View complete catalog",
+      "premiumLocations": "Premium locations",
+      "premiumLocationsDesc": "Playa del Carmen, Tulum, Cancun and more exclusive destinations",
+      "guaranteedQuality": "Guaranteed quality",
+      "guaranteedQualityDesc": "Properties verified with the highest luxury standards",
+      "expertAdvice": "Expert advice",
+      "expertAdviceDesc": "Personalized support throughout the process"
+    },
+    "owner": {
+      "badge": "Meet the Founder",
+      "title": "Welcome to Riviera Maya",
+      "subtitle": "With a close, authentic and human vision, we transform real estate investment into an emotional experience.",
+      "name": "Ernesto Mayan",
+      "position": "Founder & CEO",
+      "description1": "With a close, authentic and human vision, Ernesto has turned real estate investment into an emotional experience, because here you don't buy square meters... you buy a lifestyle that captivates.",
+      "description2": "His approach focuses on creating genuine connections between people and spaces, understanding that each property tells a unique story in the paradise of the Riviera Maya.",
+      "quote": "Here you don't come to search, you come to find what was always made for you.",
+      "years": "Years",
+      "clients": "Clients",
+      "units": "Units sold in Riviera Maya",
+      "officesTitle": "Our Offices",
+      "officesSubtitle": "We await you in our space in the heart of the Riviera Maya.",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursText": "Monday - Friday: 9:00 - 18:00\nSaturday: 9:00 - 14:00\nSunday: Closed"
+    },
+    "contact": {
+      "title": "Ready to find the property of your dreams?",
+      "subtitle": "Contact our team of experts to discover exclusive opportunities in the Riviera Maya. Leave us your details and we will contact you to provide personalized information",
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone",
+        "interest": "What type of property interests you?",
+        "message": "Message",
+        "send": "Send inquiry",
+        "selectOption": "Select an option",
+        "condo": "Condominium",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "investment": "Investment",
+        "other": "Other"
+      },
+      "directContact": "Or contact us directly:"
+    },
+    "footer": {
+      "description": "Exclusive luxury properties in the Riviera Maya since 2008.",
+      "projects": "Projects",
+      "services": "Services",
+      "contact": "Contact",
+      "follow": "Follow us",
+      "followDesc": "Stay up to date with our latest properties and real estate market news",
+      "rights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  }
+  
